@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RabbitMQ Flask</title>
+</head>
+<body>
+    <h1>Отправка сообщений в RabbitMQ</h1>
+    <form method="post">
+        <input type="text" name="message" placeholder="Введите сообщение" required>
+        <button type="submit">Отправить</button>
+    </form>
+
+    <h2>Полученные сообщения:</h2>
+    <ul>
+        {% for msg in messages %}
+            <li>{{ msg }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
